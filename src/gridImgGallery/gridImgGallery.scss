@@ -1,0 +1,24 @@
+.container__imgGallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    min-height: 100vh;
+    background-color: bisque;
+    grid-auto-flow: dense;
+
+    div {
+        overflow: hidden;
+
+        img {
+            max-width: 100%;
+            min-height: 100%;
+            object-fit: cover;
+            cursor: pointer;
+            transition: .5s ease-in-out;
+
+            &:hover {
+                transform: scale(1.5);
+            }
+        }
+    }
+
+}

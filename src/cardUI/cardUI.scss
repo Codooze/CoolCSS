@@ -1,0 +1,196 @@
+.cardUI__container {
+    display: grid;
+    height: 100vh;
+    background-color: #333333;
+    // grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+
+.inner__container {
+    // position: relative;
+    display: flex;
+    padding: 80px 40px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 80px;
+
+}
+
+.card {
+    position: relative;
+    width: 350px;
+    height: 180px;
+    background: #333;
+    transition: 0.5s;
+    align-self: center;
+
+    .content {
+        position: absolute;
+        // text-align: center;
+        bottom: 0;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+
+
+        .details {
+            transition: 0.5s;
+            text-align: center;
+            transform: translateY(50px);
+
+            h2 {
+                color: #45f3ff;
+            }
+
+            p {
+                transform: translateY(5em);
+            }
+
+            a {
+                position: absolute;
+                display: inline-block;
+                padding: 8px 15px;
+                background: #45f3ff;
+                color: #292929;
+                font-weight: 500;
+                text-decoration: none;
+            }
+        }
+    }
+
+    &:hover {
+        height: 450px;
+
+        .imgBx {
+            top: 25px;
+            width: 250px;
+            height: 250px;
+        }
+
+
+        .details {
+            transform: translateY(0px);
+
+            p {
+                padding-top: 1rem;
+                transform: translateY(0px);
+            }
+
+            a {
+                margin-top: 0.5rem;
+                position: relative;
+            }
+        }
+
+    }
+
+    .imgBx {
+        position: absolute;
+        top: -60px;
+        left: 169px;
+        width: 150px;
+        height: 150px;
+        transform: translateX(-50%);
+        background: #000;
+        transition: 0.5s;
+        z-index: 10;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 500px;
+            height: 150px;
+            transform: translate(-50%, -50%);
+            background: linear-gradient(transparent, #ff3c7b, #ff3c7b, #ff3c7b, transparent);
+            animation: animate2 6s linear infinite;
+            animation-play-state: paused;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            inset: 3px;
+            background: #292929;
+        }
+
+        img {
+            position: absolute;
+            width: 60%;
+            z-index: 1;
+            filter: invert(1);
+            opacity: 0.5;
+            transition: 0.5s;
+
+            &:hover {
+                opacity: 1;
+            }
+
+        }
+    }
+
+    @keyframes animate2 {
+        0% {
+            transform: translate(-50%, -50%) rotate(360deg);
+        }
+
+        100% {
+            transform: translate(-50%, -50%) rotate(0deg);
+        }
+    }
+
+}
+
+.lines {
+    position: absolute;
+    inset: 0;
+    background: #000;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        top: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 600px;
+        height: 120px;
+        background: linear-gradient(transparent, #45f3ff, #45f3ff, #45f3ff, transparent);
+        animation: animate 4s linear infinite;
+        animation-play-state: paused;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 3px;
+        background: #292929;
+    }
+}
+
+.card:hover {
+    .lines:before {
+        animation-play-state: running; // we can use this to start the animations
+    }
+
+    .imgBx:before {
+        animation-play-state: running; // we can use this to start the animations
+    }
+}
+
+@keyframes animate {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}

@@ -1,0 +1,32 @@
+//import Roboto from google fonts;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.mainGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100vh;
+
+}
+
+div {
+    button {
+        position: fixed;
+        inset: auto 2rem 2rem auto;
+        box-shadow: 0 0 1em rgb(0, 0, 255);
+        cursor: pointer;
+        transition: .5s ease-in-out;
+        padding: 1em;
+
+        &:hover {
+            background-color: #000;
+            color: #fff;
+        }
+
+    }
+}
