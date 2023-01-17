@@ -68,6 +68,10 @@
         .imgBx {
             top: 2rem;
             width: 12rem;
+
+            img {
+                opacity: 1;
+            }
         }
 
 
@@ -129,10 +133,6 @@
             filter: invert(1);
             opacity: 0.5;
             transition: 0.5s;
-
-            &:hover {
-                opacity: 1;
-            }
 
         }
     }
