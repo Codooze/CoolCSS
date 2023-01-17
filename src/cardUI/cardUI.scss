@@ -25,6 +25,8 @@
     background: #333;
     transition: 0.5s;
     align-self: center;
+    display: flex;
+    justify-content: center;
 
     .content {
         position: absolute;
@@ -89,10 +91,10 @@
     .imgBx {
         position: absolute;
         top: -60px;
-        left: 169px;
+        // left: 169px;
         width: 150px;
         height: 150px;
-        transform: translateX(-50%);
+        // transform: translateX(-50%);
         background: #000;
         transition: 0.5s;
         z-index: 10;
