@@ -6,9 +6,9 @@ interface Button1Props {
 
 export const Button1 = ({ handleClick }: Button1Props) => {
   return (
-    <div>
+    <div className="bton1__container">
       <a href="#" className="button1" onClick={handleClick}>
-        <span>Change View</span>
+        <span className="bton_1"> Change View</span>
       </a>
     </div>
   );
