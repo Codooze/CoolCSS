@@ -14,19 +14,6 @@
 
 }
 
-div {
-    button {
-        position: fixed;
-        inset: auto 2rem 2rem auto;
-        box-shadow: 0 0 1em rgb(0, 0, 255);
-        cursor: pointer;
-        transition: .5s ease-in-out;
-        padding: 1em;
-
-        &:hover {
-            background-color: #000;
-            color: #fff;
-        }
-
-    }
+a {
+    text-decoration: none;
 }

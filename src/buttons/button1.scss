@@ -1,0 +1,25 @@
+.button1 {
+
+
+    position: fixed;
+    inset: auto 2rem 2rem auto;
+    cursor: pointer;
+    padding: 1em;
+    // border: 2px solid #111;
+    color: #111;
+    font-size: 0.9rem;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 5rem;
+    z-index: 1;
+    letter-spacing: 1px;
+    transition: .5s ease-in-out;
+    // backdrop-filter: blur(10px);
+
+    &:hover {
+        letter-spacing: 3px;
+    }
+}

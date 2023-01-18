@@ -1,6 +1,7 @@
 import { GridView } from "./gridImgView/GridView";
 import { GridImgGallery } from "./gridImgGallery/GridImgGallery";
 import { CardUI } from "./cardUI/CardUI";
+import { Button1 } from "./buttons/Button1";
 
 import "./app.scss";
 import { QueryClient, QueryClientProvider } from "react-query";
@@ -21,9 +22,7 @@ function App() {
         <div className={gridView ? "mainGrid" : ""}>
           <GridView />
           <GridImgGallery />
-          <button id="mainGrid__Button" onClick={handleGridView}>
-            Toggle Grid View
-          </button>
+          <Button1 handleClick={handleGridView} />
         </div>
         <CardUI />
       </QueryClientProvider>
