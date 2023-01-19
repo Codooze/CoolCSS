@@ -4,16 +4,16 @@
 body {
     background: #333;
     color: #fff;
-    font-family: 'Roboto', sans-serif;
 }
 
 
 
-.container {
+.GridView__container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 0.6rem;
     height: 100vh;
+    font-family: 'Roboto', sans-serif;
 
     h2 {
         font-size: 3rem;

@@ -1,7 +1,7 @@
 import "./gridView.scss";
 export const GridView = () => {
   return (
-    <div className="container">
+    <div className="GridView__container">
       <div className="bg1">
         <h2>
           16 <span>| 24</span>

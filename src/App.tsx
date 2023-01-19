@@ -2,6 +2,7 @@ import { GridView } from "./gridImgView/GridView";
 import { GridImgGallery } from "./gridImgGallery/GridImgGallery";
 import { CardUI } from "./cardUI/CardUI";
 import { Button1 } from "./buttons/Button1";
+import { Netflix } from "./netflixCopy/Netflix";
 
 import "./app.scss";
 import { QueryClient, QueryClientProvider } from "react-query";
@@ -25,6 +26,7 @@ function App() {
           <Button1 handleClick={handleGridView} />
         </div>
         <CardUI />
+        <Netflix />
       </QueryClientProvider>
     </>
   );
