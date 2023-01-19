@@ -79,3 +79,16 @@ body {
     background: url('../assets/otoño.jpg');
     color: #333;
 }
+
+//======= MEDIA QUERIES =========
+
+//small devices
+@media screen and (max-width: 600px) {
+    .GridView__container {
+        grid-template-columns: minmax(fit-content, 1fr);
+        gap: 0.6rem;
+        height: 100vh;
+
+        overflow: hidden;
+    }
+}
