@@ -16,13 +16,13 @@ export const Netflix = () => {
             <a href="#">Tv Shows</a>
           </li>
           <li>
-            <a href="#"></a>Movies
+            <a href="#">Movies</a>
           </li>
           <li>
-            <a href="#"></a>Latest
+            <a href="#">Latest</a>
           </li>
           <li>
-            <a href="#"></a>My List
+            <a href="#">My List</a>
           </li>
         </ul>
         <div className="search">
