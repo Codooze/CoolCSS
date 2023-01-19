@@ -29,8 +29,7 @@
 }
 
 .button1 {
-
-
+    font-family: poppins;
     position: fixed;
     inset: auto 2rem 2rem auto;
     cursor: pointer;
@@ -75,21 +74,3 @@
 
     }
 }
-
-
-// .bton_1 {
-
-//     &::before {
-//         content: "";
-//         position: absolute;
-//         top: 90%;
-//         left: 50%;
-//         width: 3rem;
-//         height: 10px;
-//         bottom: -5px;
-//         transform: translateX(-50%);
-//         background: #f00;
-//         border-radius: 10px;
-//         transition: 0.5s;
-//     }
-// }
