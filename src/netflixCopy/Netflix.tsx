@@ -1,6 +1,7 @@
 import LOGO from "../assets/netflix/logo.png";
 import BG from "../assets/netflix/bg.jpg";
 import NAME from "../assets/netflix/name.png";
+import PLAY from "../assets/netflix/play.png";
 import "./netflix.scss";
 
 export const Netflix = () => {
@@ -59,6 +60,9 @@ export const Netflix = () => {
             </a>
           </div>
         </div>
+        <a className="play">
+          <img src={PLAY}></img>Watch Trailer
+        </a>
       </div>
     </section>
   );
