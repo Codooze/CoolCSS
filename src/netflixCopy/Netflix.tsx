@@ -1,4 +1,5 @@
 import LOGO from "../assets/netflix/logo.png";
+import BG from "../assets/netflix/bg.jpg";
 import "./netflix.scss";
 
 export const Netflix = () => {
@@ -30,6 +31,9 @@ export const Netflix = () => {
           <i className="fa fa-search" aria-hidden="true"></i>
         </div>
       </header>
+      <div className="banner">
+        <img src={BG} alt="" className="bg" />
+      </div>
     </section>
   );
 };
