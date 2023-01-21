@@ -2,6 +2,8 @@ import LOGO from "../assets/netflix/logo.png";
 import BG from "../assets/netflix/bg.jpg";
 import NAME from "../assets/netflix/name.png";
 import PLAY from "../assets/netflix/play.png";
+import TRAILER from "../assets/netflix/trailer.mp4";
+import CLOSE from "../assets/netflix/close.png";
 import "./netflix.scss";
 
 export const Netflix = () => {
@@ -63,6 +65,10 @@ export const Netflix = () => {
         <a className="play">
           <img src={PLAY}></img>Watch Trailer
         </a>
+      </div>
+      <div className="trailer">
+        <video src={TRAILER} controls={true} autoPlay={true}></video>
+        <img src={CLOSE} alt="" className="close" />
       </div>
     </section>
   );

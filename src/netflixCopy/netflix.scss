@@ -4,6 +4,7 @@
     font-family: "Poppins", sans-serif;
     background: #000;
     // overflow: hidden;
+    display: grid;
 
     header {
         position: absolute;
@@ -189,9 +190,45 @@
             }
         }
     }
+
 }
 
 
+.trailer {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    backdrop-filter: blur(10px);
+    z-index: 4;
+    visibility: hidden;
+    opacity: 0;
+
+    video {
+        justify-self: center;
+        align-self: center;
+        position: absolute;
+        width: 90%;
+        object-fit: cover;
+        z-index: 3;
+        grid-area: "sr_top";
+    }
+
+    .close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 1rem;
+        font-size: 2rem;
+        color: #fff;
+        cursor: pointer;
+
+    }
+
+    img {
+        width: 4rem;
+    }
+}
 
 
 //MEDIA QUERIES
