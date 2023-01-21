@@ -273,8 +273,25 @@
 
 
 @media screen and (max-width: 865px) {
+    .netflix__container .banner .content {
+        display: flex;
+        max-width: 85vw;
+        flex-direction: column;
+
+        .movieTitle {
+            justify-content: center;
+            justify-items: center;
+            justify-self: center;
+            align-self: center;
+        }
+    }
+
+
+
     .banner {
         justify-content: center;
+
+
 
         .play {
             left: 0%;
