@@ -273,6 +273,10 @@
 
 
 @media screen and (max-width: 865px) {
+    header .navigation {
+        width: 100vw;
+    }
+
     .netflix__container .banner .content {
         display: flex;
         max-width: 85vw;
