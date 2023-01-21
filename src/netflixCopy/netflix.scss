@@ -36,11 +36,14 @@
                 border-radius: 0.4rem;
                 padding: 0.5rem 0.6rem 0.5rem 3rem;
                 backdrop-filter: blur(10px);
+                width: clamp(1vw, 10vw, 20vw);
 
                 &::placeholder {
                     color: #fff;
                 }
+
             }
+
 
             .fa-search {
                 position: absolute;
@@ -220,9 +223,8 @@
         right: 0;
         padding: 1rem;
         font-size: 2rem;
-        color: #fff;
         cursor: pointer;
-
+        filter: invert(1);
     }
 
     img {
@@ -243,5 +245,16 @@
             padding-top: 2rem;
             margin-top: 2rem;
         }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    header {
+        flex-direction: column;
+    }
+
+    .netflix__container header .search input {
+
+        width: 25vw;
     }
 }
