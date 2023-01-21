@@ -42,7 +42,7 @@ export const Netflix = () => {
           <i className="fa fa-search" aria-hidden="true"></i>
         </div>
       </header>
-      <div className="banner">
+      <div className="banner ">
         <img src={BG} alt="" className="bg" />
         <div className="content">
           <img src={NAME} alt="" className="movieTitle" />
@@ -70,13 +70,13 @@ export const Netflix = () => {
           </div>
         </div>
         <a onClick={handlePlay} className="play">
-          <img src={PLAY}></img>Watch Trailer
+          <img id="bnner" src={PLAY}></img>Watch Trailer
         </a>
       </div>
       {showTrailer && (
         <div className="trailer">
           <video src={TRAILER} controls={true} autoPlay={true}></video>
-          <img onClick={handlePlay} src={CLOSE} alt="" className="close" />
+          <img className="close " onClick={handlePlay} src={CLOSE} alt="" />
         </div>
       )}
     </section>
