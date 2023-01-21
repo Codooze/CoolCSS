@@ -201,8 +201,8 @@
     display: grid;
     backdrop-filter: blur(10px);
     z-index: 4;
-    visibility: hidden;
-    opacity: 0;
+    // visibility: hidden;
+    // opacity: 0;
 
     video {
         justify-self: center;

@@ -5,8 +5,15 @@ import PLAY from "../assets/netflix/play.png";
 import TRAILER from "../assets/netflix/trailer.mp4";
 import CLOSE from "../assets/netflix/close.png";
 import "./netflix.scss";
+import { useState } from "react";
 
 export const Netflix = () => {
+  const [showTrailer, setShowTrailer] = useState(false);
+
+  const handlePlay = () => {
+    setShowTrailer(!showTrailer);
+  };
+  const isActive = showTrailer ? "active close" : "close";
   return (
     <section className="netflix__container">
       <header>
@@ -62,14 +69,16 @@ export const Netflix = () => {
             </a>
           </div>
         </div>
-        <a className="play">
+        <a onClick={handlePlay} className="play">
           <img src={PLAY}></img>Watch Trailer
         </a>
       </div>
-      <div className="trailer">
-        <video src={TRAILER} controls={true} autoPlay={true}></video>
-        <img src={CLOSE} alt="" className="close" />
-      </div>
+      {showTrailer && (
+        <div className="trailer">
+          <video src={TRAILER} controls={true} autoPlay={true}></video>
+          <img onClick={handlePlay} src={CLOSE} alt="" className="close" />
+        </div>
+      )}
     </section>
   );
 };
