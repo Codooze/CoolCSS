@@ -7,6 +7,7 @@ import { Netflix } from "./netflixCopy/Netflix";
 import "./app.scss";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { useState } from "react";
+import { GridHas } from "./gridHas/GridHas";
 
 const queryClient = new QueryClient();
 
@@ -23,9 +24,10 @@ function App() {
         <div className={gridView ? "mainGrid" : ""}>
           <GridView />
           <GridImgGallery />
+          <GridHas />
+          <CardUI />
           <Button1 handleClick={handleGridView} />
         </div>
-        <CardUI />
         <Netflix />
       </QueryClientProvider>
     </>
