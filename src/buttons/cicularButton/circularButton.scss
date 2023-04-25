@@ -1,0 +1,68 @@
+.circularBtn_Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(45deg, #8460ed, #ff1252);
+}
+
+.circularBtn__inner__container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  li {
+    position: absolute;
+    list-style: none;
+    left: 0;
+    transform-origin: 100px;
+    transition: transform 0.3s ease;
+    transform: rotate(0deg) translateX(200px);
+
+    // &:nth-child(6) a {
+    //   transform: rotate(-85deg);
+    // }
+
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      background: #fff;
+      border-radius: 50%;
+    }
+  }
+
+  .circularBtn__toggle {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
+    font-size: 2em;
+    transition: transform 1.25s;
+  }
+
+  .circularBtn__toggle.active {
+    transform: rotate(315deg);
+  }
+}
+
+
+$circularBtnListLength: 8; // Define the number of li elements
+
+// Loop through the li elements and set the delay based on their position
+@for $i from 1 through $circularBtnListLength {
+  li:nth-child(#{$i}) {
+    transition-delay: ($i - 1) * 0.1s;
+  }
+}

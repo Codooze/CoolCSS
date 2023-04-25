@@ -8,6 +8,7 @@ import "./app.scss";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { useState } from "react";
 import { GridHas } from "./gridHas/GridHas";
+import CircularButton from "./buttons/cicularButton/CircularButton";
 
 const queryClient = new QueryClient();
 
@@ -26,9 +27,11 @@ function App() {
           <GridImgGallery />
           <GridHas />
           <CardUI />
+          {gridView && <CircularButton />}
           <Button1 handleClick={handleGridView} />
         </div>
         <Netflix />
+        {!gridView && <CircularButton />}
       </QueryClientProvider>
     </>
   );
